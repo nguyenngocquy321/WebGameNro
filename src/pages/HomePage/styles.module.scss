@@ -1,0 +1,60 @@
+@import '@styles/mixins.module.scss';
+.title {
+    text-align: center;
+    margin: margin-bottom 10px;
+    &:hover {
+        color: #ff324d;
+        cursor: pointer;
+    }
+}
+.desc {
+    text-align: center;
+    margin: 0;
+}
+.colorThr {
+    color: #ff324d;
+    font-weight: 600;
+    padding: 10px;
+    padding: 0;
+}
+.colorYellow {
+    color: rgb(156, 156, 60);
+    margin-bottom: 12px;
+}
+.boxImg {
+    position: relative;
+    .hoverImage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include flex_box_custom(center, center, 0px);
+        transition: background-color ease 0.5s;
+        transition: transform ease 0.5s;
+        span {
+            color: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            line-height: 40px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: background-color ease 0.5s, color ease 0.5s;
+            opacity: 0;
+            &:hover {
+                background-color: #ff324d;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+    &:hover .hoverImage {
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        span {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+}

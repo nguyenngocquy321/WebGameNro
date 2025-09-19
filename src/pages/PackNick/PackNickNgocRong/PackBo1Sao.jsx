@@ -1,0 +1,35 @@
+import Breadcrumb from '@components/Breadcrumb/Breadcrumb';
+import CardText from './components/CardText';
+import styles from './styles.module.scss';
+import FilterProducts from './components/FilterProducts';
+import Item from './components/Item';
+function PackBo1Sao() {
+    const { boxCard } = styles;
+    return (
+        <>
+            <>
+                <div>
+                    <div className='d-flex justify-content-between'>
+                        <div>
+                            <h2 className='fw-bold'>BÁN ĐỒ NGỌC RỒNG</h2>
+                        </div>
+                        <div>
+                            <Breadcrumb content={'BÁN ĐỒ NGỌC RỒNG'} />
+                        </div>
+                    </div>
+                    <div className={boxCard}>
+                        <CardText />
+                    </div>
+                    <div>
+                        <FilterProducts />
+                    </div>
+                    <div>
+                        <Item />
+                    </div>
+                </div>
+            </>
+        </>
+    );
+}
+
+export default PackBo1Sao;
